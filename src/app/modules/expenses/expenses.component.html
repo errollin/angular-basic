@@ -1,3 +1,7 @@
 <app-card class="expenses">
+  <app-expense-filter
+    [selected]="filtedYear"
+    (filterChange)="handleFilterChange($event)"
+  ></app-expense-filter>
   <app-expense-list [expenses]="expenses"></app-expense-list>
 </app-card>

@@ -9,4 +9,10 @@ import { Expense } from '../../models';
 })
 export class ExpensesComponent {
   @Input() expenses!: Array<Expense>;
+
+  filtedYear: string = '2022';
+
+  handleFilterChange(selectedYear: string) {
+    this.filtedYear = selectedYear;
+  }
 }

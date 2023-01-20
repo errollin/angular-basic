@@ -6,6 +6,7 @@ import { ExpensesComponent } from './expenses.component';
 import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
 import { ExpenseDateComponent } from './expense-date/expense-date.component';
+import { ExpenseFilterComponent } from './expense-filter/expense-filter.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ExpenseDateComponent } from './expense-date/expense-date.component';
     ExpenseListComponent,
     ExpenseItemComponent,
     ExpenseDateComponent,
+    ExpenseFilterComponent,
   ],
   imports: [
     CommonModule,
