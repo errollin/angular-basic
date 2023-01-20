@@ -1,0 +1,9 @@
+<div class="expense-list">
+  <ng-container *ngFor="let expense of expenses">
+    <app-expense-item
+      [title]="expense.title"
+      [amount]="expense.amount"
+      [date]="expense.date"
+    ></app-expense-item>
+  </ng-container>
+</div>
