@@ -1,7 +1,7 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { Expense } from '../../models';
-import { Output } from '@angular/core';
+import { ExpensesService } from './../../services/expenses/expenses.service';
 
 @Component({
   selector: 'app-new-expense',
@@ -9,9 +9,9 @@ import { Output } from '@angular/core';
   styleUrls: ['./new-expense.component.scss'],
 })
 export class NewExpenseComponent {
-  @Output() expenseAdd = new EventEmitter<Expense>();
-
   isEditing: boolean = false;
+
+  constructor(private expensesService: ExpensesService) {}
 
   handleSaveExpenseData(enteredExpenseData: Expense) {
     const expenseData: Expense = {
@@ -19,7 +19,7 @@ export class NewExpenseComponent {
       id: Math.random().toString(),
     };
 
-    this.expenseAdd.emit(expenseData);
+    this.expensesService.addExpense(expenseData);
     this.handleStopEditing();
   }
 

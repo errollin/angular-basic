@@ -1,18 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 
-import { Expense } from '../../models';
+import { ExpensesService } from '../../services/expenses/expenses.service';
 
 @Component({
   selector: 'app-expenses',
   templateUrl: './expenses.component.html',
   styleUrls: ['./expenses.component.scss'],
 })
-export class ExpensesComponent {
-  @Input() expenses!: Array<Expense>;
+export class ExpensesComponent implements OnInit {
+  filteredYear!: string;
 
-  filtedYear: string = '2022';
+  constructor(private expensesService: ExpensesService) {}
+
+  ngOnInit() {
+    this.expensesService.filteredYearChange.subscribe((filteredYear) => {
+      this.filteredYear = filteredYear;
+    });
+  }
 
   handleFilterChange(selectedYear: string) {
-    this.filtedYear = selectedYear;
+    this.expensesService.setFilteredYear(selectedYear);
   }
 }

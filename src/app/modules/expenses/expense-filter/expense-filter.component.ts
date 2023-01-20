@@ -10,6 +10,7 @@ import { Item } from '../../../models';
 })
 export class ExpenseFilterComponent {
   @Input() selected!: string;
+  // @Output() selectedChange = new EventEmitter<string>();
   @Output() filterChange = new EventEmitter<string>();
 
   years: Array<Item> = DUMMY_YEAR_OPTIONS;
