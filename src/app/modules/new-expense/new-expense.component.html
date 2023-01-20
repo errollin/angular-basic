@@ -1,0 +1,11 @@
+<app-card class="new-expense">
+  <ng-container *ngIf="isEditing; else editButton">
+    <app-expense-form
+      (expenseDataSave)="handleSaveExpenseData($event)"
+      (expenseDataCancelSave)="handleStopEditing()"
+    ></app-expense-form>
+  </ng-container>
+  <ng-template #editButton>
+    <button (click)="handleStartEditing()">Add New Expense</button>
+  </ng-template>
+</app-card>

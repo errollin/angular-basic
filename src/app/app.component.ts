@@ -10,4 +10,8 @@ import { Expense } from './models';
 })
 export class AppComponent {
   expenses: Array<Expense> = DUMMY_EXPENSES;
+
+  handleAddExpense(expense: Expense) {
+    this.expenses.unshift(expense);
+  }
 }
