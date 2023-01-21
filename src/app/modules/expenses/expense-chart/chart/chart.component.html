@@ -1,0 +1,8 @@
+<div class="chart">
+  <app-chart-bar
+    *ngFor="let dataPoint of dataPoints"
+    [label]="dataPoint.label"
+    [value]="+dataPoint.value"
+    [maxValue]="totalMaximum"
+  ></app-chart-bar>
+</div>

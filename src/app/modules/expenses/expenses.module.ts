@@ -8,6 +8,9 @@ import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
 import { ExpenseDateComponent } from './expense-date/expense-date.component';
 import { ExpenseFilterComponent } from './expense-filter/expense-filter.component';
+import { ExpenseChartComponent } from './expense-chart/expense-chart.component';
+import { ChartComponent } from './expense-chart/chart/chart.component';
+import { ChartBarComponent } from './expense-chart/chart-bar/chart-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ExpenseFilterComponent } from './expense-filter/expense-filter.componen
     ExpenseItemComponent,
     ExpenseDateComponent,
     ExpenseFilterComponent,
+    ExpenseChartComponent,
+    ChartComponent,
+    ChartBarComponent,
   ],
   imports: [
     CommonModule,

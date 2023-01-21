@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 import { DUMMY_EXPENSES } from '../../data';
-import { Expense } from '../../models';
+import { Expense, Item } from '../../models';
 
 @Injectable({
   providedIn: 'root',
